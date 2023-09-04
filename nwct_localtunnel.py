@@ -24,6 +24,7 @@ v1.1
 1、自动安装必要模块；
 2、支持自定义域名前缀；
 '''
+
 import os
 import re
 import sys
@@ -34,13 +35,13 @@ def update():
     print("当前运行的脚本版本：" + str(version))
     sys.stdout.flush()
     try:
-        r1 = requests.get("https://gitee.com/lstcml/qinglongscripts/raw/master/nwct/nwct_localtunnel.py").text
+        r1 = requests.get("hhttps://github.com/a512154224/qinglongscripts/raw/main/nwct_localtunnel.py").text
         r2 = re.findall(re.compile("version = \d.\d"), r1)[0].split("=")[1].strip()
         if float(r2) > version:
             print("发现新版本：" + r2)
             print("正在自动更新脚本...")
             sys.stdout.flush()
-            os.system("ql raw https://gitee.com/lstcml/qinglongscripts/raw/master/nwct/nwct_localtunnel.py &")
+            os.system("ql raw https://github.com/a512154224/qinglongscripts/raw/main/nwct_localtunnel.py &")
             os._exit()
     except:
         pass
@@ -112,7 +113,7 @@ def load_send():
     sys.path.append(cur_path)
     sendNotifPath = cur_path + "/sendNotify.py"
     if not os.path.exists(sendNotifPath):
-        res = requests.get("https://gitee.com/lstcml/qinglongscripts/raw/master/sendNotify.py")
+        res = requests.get("https://github.com/a512154224/qinglongscripts/raw/main/sendNotify.py")
         with open(sendNotifPath, "wb") as f:
             f.write(res.content)
         
