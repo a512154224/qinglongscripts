@@ -12,9 +12,10 @@
 
 配置：变量qlsubdomain为域名前缀，建议首次手动运行一次任务，再查看任务日志
 
-定时：*/10 * * * *（建议10分钟）
+定时：*/50 * * * *（建议10分钟）
 
 
+### nwct_cpolar.py
 名称：青龙外网访问
 
 拉取：ql raw https://github.com/a512154224/qinglongscripts/raw/main/nwct_cpolar.py
@@ -23,6 +24,12 @@
 
 定时：*/10 * * * *（建议10分钟）
 
-### 链接
-[python-ngrok](https://github.com/hauntek/python-ngrok)
-[open-dingtalk](https://github.com/open-dingtalk/pierced)
+
+### alist.py
+名称：青龙外网访问
+
+拉取：ql raw https://github.com/a512154224/qinglongscripts/raw/main/alist.py
+
+配置：暂无
+
+定时：*/50 * * * *（随意，不要太频繁即可）
