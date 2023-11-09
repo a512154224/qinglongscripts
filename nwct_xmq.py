@@ -22,13 +22,14 @@ import requests
 from time import sleep
 
 def check_os():
+    print('正在检测设备架构.')
     cpu_arch = os.popen('uname -m').read()
     if 'arm' in cpu_arch or 'aarch64' in cpu_arch:
         download_app('arm')
     elif 'x86' in cpu_arch or 'x64' in cpu_arch:
         download_app('386')
     else:
-        print('穿透失败：不支持当前架构！')
+        print('暂不支持当前架构.')
 
 def download_app(cpu):
     if not os.path.exists("xiaomiqiu"):
@@ -44,7 +45,7 @@ def download_app(cpu):
             print("穿透程序下载失败.\n请检查网络后重试.")
             os.system(f"rm -rf {app_path}")
     else:
-        print("检测穿透程序存在")
+        print("检测穿透程序存在.")
         start_nwct()
 
 def process_daemon():
