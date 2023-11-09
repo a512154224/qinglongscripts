@@ -32,8 +32,8 @@ def check_os():
         print('暂不支持当前架构.')
 
 def download_app(cpu):
+    print('当前架构支持穿透.')
     if not os.path.exists("xiaomiqiu"):
-        print('当前架构支持穿透.')
         print("正在检测穿透程序.\n尝试下载穿透程序.")
         try:
             app_url = f"https://github.com/a512154224/qinglongscripts/raw/main/xiaomiqiu_{cpu}"
