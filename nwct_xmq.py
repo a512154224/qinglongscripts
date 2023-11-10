@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Version: v1.0
+# Version: v1.1
 # Created by lstcml on 2023/11/08
 # 建议定时10分钟：*/10 * * * *
 
@@ -14,6 +14,9 @@
 
 v1.0
 1、支持免费版与vip服务器；
+
+v1.1
+1、修复无权限的问题；
 '''
 
 
@@ -72,6 +75,7 @@ def process_daemon():
         return False
 
 def start_nwct():
+    os.system(f"chmod +x {app_path} >/dev/null 2>&1")
     if not process_daemon():
         os.system("killall xiaomiqiu >/dev/null 2>&1")
         print("正在启动穿透服务.")
