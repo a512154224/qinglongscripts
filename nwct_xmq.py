@@ -28,6 +28,7 @@ def check_os():
     global url
     print('正在检测设备架构.')
     cpu_arch = os.popen('uname -m').read()
+    print(f'设备架构：{cpu_arch}.')
     if 'arm' in cpu_arch or 'aarch64' in cpu_arch:
         url = "http://note.youdao.com/yws/api/personal/file/WEB59a6cc544058b069c139957f720ad471?method=download&inline=true&shareKey=06b9e878c8991524296fda31791826fa"
         download_app('arm')
