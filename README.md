@@ -35,8 +35,7 @@
 
 
 ### alist.py
-名称：青龙外网访问
-
+名称：阿里云云盘的辅助脚本
 拉取：ql raw https://github.com/a512154224/qinglongscripts/raw/main/alist.py
 
 配置：暂无
